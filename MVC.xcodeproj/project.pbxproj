@@ -12,6 +12,8 @@
 		710FF9D51D4C15E600F35346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 710FF9D31D4C15E600F35346 /* Main.storyboard */; };
 		710FF9D71D4C15E600F35346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 710FF9D61D4C15E600F35346 /* Assets.xcassets */; };
 		710FF9DA1D4C15E600F35346 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 710FF9D81D4C15E600F35346 /* LaunchScreen.storyboard */; };
+		710FF9E51D4CFFBB00F35346 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710FF9E41D4CFFBB00F35346 /* Person.swift */; };
+		710FF9E91D4D066900F35346 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710FF9E81D4D066900F35346 /* RoundedImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		710FF9D61D4C15E600F35346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		710FF9D91D4C15E600F35346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		710FF9DB1D4C15E600F35346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		710FF9E41D4CFFBB00F35346 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		710FF9E81D4D066900F35346 /* RoundedImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,9 @@
 		710FF9CE1D4C15E600F35346 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				710FF9E31D4C160200F35346 /* Controller */,
+				710FF9E21D4C15FD00F35346 /* View */,
+				710FF9E11D4C15F700F35346 /* Model */,
 				710FF9CF1D4C15E600F35346 /* AppDelegate.swift */,
 				710FF9D11D4C15E600F35346 /* ViewController.swift */,
 				710FF9D31D4C15E600F35346 /* Main.storyboard */,
@@ -62,6 +69,29 @@
 				710FF9DB1D4C15E600F35346 /* Info.plist */,
 			);
 			path = MVC;
+			sourceTree = "<group>";
+		};
+		710FF9E11D4C15F700F35346 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				710FF9E41D4CFFBB00F35346 /* Person.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		710FF9E21D4C15FD00F35346 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				710FF9E81D4D066900F35346 /* RoundedImageView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		710FF9E31D4C160200F35346 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +165,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				710FF9E91D4D066900F35346 /* RoundedImageView.swift in Sources */,
+				710FF9E51D4CFFBB00F35346 /* Person.swift in Sources */,
 				710FF9D21D4C15E600F35346 /* ViewController.swift in Sources */,
 				710FF9D01D4C15E600F35346 /* AppDelegate.swift in Sources */,
 			);

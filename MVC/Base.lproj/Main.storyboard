@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MVC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,69 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dgH-4c-4Ke">
+                                <rect key="frame" x="155" y="124" width="291" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="291" id="uN2-xK-Yr8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puppy" translatesAutoresizingMaskIntoConstraints="NO" id="Kc3-um-gfL" customClass="RoundedImageView" customModule="MVC" customModuleProvider="target">
+                                <rect key="frame" x="180" y="223" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="2fk-XV-oOA"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter New First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8I2-Cs-ChI">
+                                <rect key="frame" x="180" y="163" width="240" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="eJY-8P-2we"/>
+                                    <constraint firstAttribute="height" constant="30" id="mah-ny-ofZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2jO-eO-exX">
+                                <rect key="frame" x="239" y="480" width="122" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="6dv-wv-ewW"/>
+                                    <constraint firstAttribute="height" constant="42" id="jKD-CT-n0J"/>
+                                </constraints>
+                                <state key="normal" title="Rename"/>
+                                <connections>
+                                    <action selector="renameButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m0T-SW-QZ3"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8I2-Cs-ChI" firstAttribute="leading" secondItem="Kc3-um-gfL" secondAttribute="leading" id="8W3-mO-5Oh"/>
+                            <constraint firstItem="dgH-4c-4Ke" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="104" id="CWY-Uw-di7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kc3-um-gfL" secondAttribute="bottom" constant="249" id="HLZ-sa-vit"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2jO-eO-exX" secondAttribute="bottom" constant="78" id="PDz-WK-Xiu"/>
+                            <constraint firstItem="8I2-Cs-ChI" firstAttribute="top" secondItem="dgH-4c-4Ke" secondAttribute="bottom" constant="18" id="POe-oF-SN3"/>
+                            <constraint firstItem="dgH-4c-4Ke" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X8K-ES-Arv"/>
+                            <constraint firstItem="Kc3-um-gfL" firstAttribute="top" secondItem="dgH-4c-4Ke" secondAttribute="bottom" constant="78" id="YUb-hV-fry"/>
+                            <constraint firstItem="Kc3-um-gfL" firstAttribute="centerX" secondItem="dgH-4c-4Ke" secondAttribute="centerX" id="djR-kA-V0B"/>
+                            <constraint firstItem="8I2-Cs-ChI" firstAttribute="trailing" secondItem="Kc3-um-gfL" secondAttribute="trailing" id="sgd-WR-n3L"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dgH-4c-4Ke" secondAttribute="bottom" constant="455" id="v1l-c5-ldS"/>
+                            <constraint firstItem="2jO-eO-exX" firstAttribute="centerX" secondItem="Kc3-um-gfL" secondAttribute="centerX" id="x7B-if-8NS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="dgH-4c-4Ke" id="CqJ-CE-i0o"/>
+                        <outlet property="renameField" destination="8I2-Cs-ChI" id="3d6-EC-1cg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="349"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="puppy" width="512" height="512"/>
+    </resources>
 </document>

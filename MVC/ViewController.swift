@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.backgroundColor = UIColor(red: 230/255, green: 220/255, blue: 210/255, alpha: 0.8)
     
         nameLabel.text = person.fullname
         
